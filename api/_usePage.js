@@ -1,10 +1,10 @@
 module.exports = _usePage = async (browser) => {
   const [page] = await browser.pages();
 
-  /*   await page.setDefaultNavigationTimeout(0);
-    await page.setExtraHTTPHeaders({
-      'Accept-Language': 'pt-BR'
-    }); */
+  await page.setDefaultNavigationTimeout(0);
+  await page.setExtraHTTPHeaders({
+    'Accept-Language': 'pt-BR'
+  });
 
   //Skip js/images/styles/fonts loading for performance
   await page.setRequestInterception(true);
